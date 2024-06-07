@@ -2,9 +2,21 @@
   "name": "conexo",
   "version": "0.1.0",
   "description": "Jogo conexo",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"nodemon ./src/index.js\" \"npm run start-client\" ",
+    "start-client": "npm run dev --prefix client"
   },
-  "maintainers": []
+  "maintainers": [],
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mariadb": "^3.3.1",
+    "mysql2": "^3.10.0",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.37.3"
+  }
 }
